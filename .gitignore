@@ -1,0 +1,46 @@
+# Ren'Py: компиляция и кэш
+*.rpyc
+*.rpymc
+*.rpyb
+game/cache/
+game/saves/
+
+# Ren'Py: диагностика
+errors.txt
+log.txt
+traceback.txt
+lint*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Артефакты тестов и временные копии картинок
+game/tests/screenshots/
+*.new.png
+*.diff.png
+*.old
+*.pre-width
+*.pre-inner-width
+*.backup
+*.bak
+*.bak_*
+*.tmp
+
+# Локальное состояние инструментов
+.renpy-mcp/
+node_modules/
+.env
+.env.*
+
+# Сборки Ren'Py
+*-dists/
+
+# ОС и редакторы
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.swp
+.vscode/
+.idea/

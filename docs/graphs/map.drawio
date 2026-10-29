@@ -1,0 +1,730 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Карта мира" id="nastya-story-world-map">
+    <mxGraphModel dx="3431" dy="3686" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="Спальный район" mapNodeId="hc_residential_district" id="hc_rd">
+          <mxCell parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="1818" width="2046" x="14" y="43" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="СПАЛЬНЫЙ РАЙОН" mapNodeId="loc_residential_district_main" id="rd_main">
+          <mxCell parent="hc_rd" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="54" width="198" x="1164.5" y="51" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кафе" mapNodeId="loc_cafe" id="cafe_group">
+          <mxCell parent="hc_rd" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="199" width="523" x="1266" y="658" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-3" edge="1" parent="cafe_group" source="cafe_hall" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="cafe_back">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Зал" mapNodeId="loc_cafe_hall" id="cafe_hall">
+          <mxCell parent="cafe_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="86" x="270" y="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Туалет" mapNodeId="loc_cafe_toilet" id="cafe_toilet">
+          <mxCell parent="cafe_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="111" x="396" y="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подсобка / гардероб" mapNodeId="loc_cafe_backroom" id="cafe_back">
+          <mxCell parent="cafe_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="216" x="14" y="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кабинет Аслана" mapNodeId="loc_cafe_aslan_office" id="cafe_office">
+          <mxCell parent="cafe_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="178" x="92" y="129" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кухня" mapNodeId="loc_cafe_kitchen" id="cafe_kitchen">
+          <mxCell parent="cafe_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="215" x="292" y="129" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e001" edge="1" parent="cafe_group" source="cafe_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="cafe_toilet">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e003" edge="1" parent="cafe_group" source="cafe_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="cafe_office">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e004" edge="1" parent="cafe_group" source="cafe_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="cafe_kitchen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Районный колледж" mapNodeId="loc_masha_school" id="school_group">
+          <mxCell parent="hc_rd" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="209" width="385" x="1404" y="161" as="geometry">
+              <mxRectangle height="26" width="108" x="1627" y="160" as="alternateBounds" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-78" edge="1" parent="school_group" source="school_entry" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="school_floor1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-80" edge="1" parent="school_group" source="school_entry" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="school_sport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Вход в колледж" mapNodeId="loc_masha_school_entrance" id="school_entry">
+          <mxCell parent="school_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="155" x="15" y="47" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Первый этаж" mapNodeId="loc_masha_school_floor_1" id="school_floor1">
+          <mxCell parent="school_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="155" x="212" y="47" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Спортивная площадка" mapNodeId="loc_masha_school_sports_ground" id="school_sport">
+          <mxCell parent="school_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="155" x="15" y="135" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Дом (ул. Лесная, дом 1)" mapNodeId="loc_apartment_building" id="house">
+          <mxCell parent="hc_rd" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="1636" width="1173" x="28" y="161" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Двор дома" mapNodeId="loc_building_yard" id="yard">
+          <mxCell parent="house" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="115" x="1037" y="47" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Детская площадка" mapNodeId="loc_playground" id="playground">
+          <mxCell parent="house" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="197" x="787" y="47" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подъезд 1" mapNodeId="loc_entrance_1" id="ent1">
+          <mxCell parent="house" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="1266" width="1076" x="16" y="134" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-1" edge="1" parent="ent1" source="floor5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" target="apt9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e008" edge="1" parent="ent1" source="floor1" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="apt2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e009" edge="1" parent="ent1" source="floor1" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="apt1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e010" edge="1" parent="ent1" source="floor2" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="apt4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e011" edge="1" parent="ent1" source="floor2" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="apt3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e012" edge="1" parent="ent1" source="floor3" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="a6_hall">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e013" edge="1" parent="ent1" source="floor3" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=orthogonalEdgeStyle;" target="a5_hall">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="269.73" y="880.72" />
+              <mxPoint x="419.39" y="880.72" />
+              <mxPoint x="419.39" y="714.03" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e014" edge="1" parent="ent1" source="floor4" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="a7_hall">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="270.25" y="572" />
+              <mxPoint x="418.25" y="572" />
+              <mxPoint x="418.25" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e015" edge="1" parent="ent1" source="floor4" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="apt8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e016" edge="1" parent="ent1" source="floor5" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="apt10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e018" edge="1" parent="ent1" source="floor5" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.41;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.41;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="roof">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e019" edge="1" parent="ent1" source="floor5" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.41;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.41;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="floor4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e020" edge="1" parent="ent1" source="floor4" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.41;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.41;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="floor3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e021" edge="1" parent="ent1" source="floor3" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.41;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.41;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="floor2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e022" edge="1" parent="ent1" source="floor2" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.41;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.41;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="floor1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-8" edge="1" parent="ent1" source="floor1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.41;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.41;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;" target="basement" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="434.3900000000001" y="1155" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Крыша" mapNodeId="loc_building_roof" id="roof">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="12.5" y="156" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="5 этаж" mapNodeId="loc_entrance_1_floor_5" id="floor5">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="13" y="284" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="4 этаж" mapNodeId="loc_entrance_1_floor_4" id="floor4">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="13" y="589" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="3 этаж" mapNodeId="loc_entrance_1_floor_3" id="floor3">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="12.5" y="898" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="2 этаж" mapNodeId="loc_entrance_1_floor_2" id="floor2">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="12.5" y="1031" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="1 этаж" mapNodeId="loc_entrance_1_floor_1" id="floor1">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="12" y="1155" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подвал" mapNodeId="loc_building_basement" id="basement">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;points=[[0,0,0,0,0],[0,0.25,0,0,0],[0,0.5,0,0,0],[0,0.75,0,0,0],[0,1,0,0,0],[0.25,0,0,0,0],[0.25,1,0,0,0],[0.41,0,0,0,0],[0.41,1,0,0,0],[0.5,0,0,0,0],[0.5,1,0,0,0],[0.75,0,0,0,0],[0.75,1,0,0,0],[1,0,0,0,0],[1,0.25,0,0,0],[1,0.5,0,0,0],[1,0.75,0,0,0],[1,1,0,0,0]];fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="12.5" y="1218" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 9" mapNodeId="loc_apartment_9" id="apt9">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="392" x="13" y="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 10" mapNodeId="loc_apartment_10" id="apt10">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="580" x="461.5" y="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 8" mapNodeId="loc_apartment_8" id="apt8">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="580" x="461.5" y="528" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 3" mapNodeId="loc_apartment_3" id="apt3">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="392" x="12.5" y="964" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 4" mapNodeId="loc_apartment_4" id="apt4">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="580" x="461.5" y="964" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 1" mapNodeId="loc_apartment_1" id="apt1">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="392" x="12.5" y="1096" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 2" mapNodeId="loc_apartment_2" id="apt2">
+          <mxCell parent="ent1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="580" x="461.5" y="1096" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Квартира 5 (Настя и Маша)" mapNodeId="loc_apartment_5" id="apt5">
+          <mxCell parent="ent1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="217" width="392" x="12.5" y="645" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Прихожая" mapNodeId="loc_apartment_5_hallway" id="a5_hall">
+          <mxCell parent="apt5" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="99" x="275" y="42" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Общая комната" mapNodeId="loc_apartment_5_room" id="a5_room">
+          <mxCell parent="apt5" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="109" y="42" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-6" edge="1" parent="apt5" source="a5_kitchen" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="a5_bath" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Кухня" mapNodeId="loc_apartment_5_kitchen" id="a5_kitchen">
+          <mxCell parent="apt5" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="64" x="144.5" y="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ванная + туалет" mapNodeId="loc_apartment_5_bathroom" id="a5_bath">
+          <mxCell parent="apt5" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="239" y="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Балкон" mapNodeId="loc_apartment_5_balcony" id="a5_balcony">
+          <mxCell parent="apt5" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="112" x="14" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e023" edge="1" parent="apt5" source="a5_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="a5_bath">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e024" edge="1" parent="apt5" source="a5_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="a5_kitchen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e025" edge="1" parent="apt5" source="a5_room" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="a5_bath">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e026" edge="1" parent="apt5" source="a5_room" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="a5_kitchen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e027" edge="1" parent="apt5" source="a5_room" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="a5_balcony">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e028" edge="1" parent="apt5" source="a5_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="a5_room">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e029" edge="1" parent="apt5" source="a5_bath" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;" target="a5_kitchen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Квартира 7 (Анна)" mapNodeId="loc_apartment_7" id="apt7">
+          <mxCell parent="ent1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="217" width="392" x="13" y="341" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Прихожая" mapNodeId="loc_apartment_7_hallway" id="a7_hall">
+          <mxCell parent="apt7" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="99" x="275" y="42" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Общая комната" mapNodeId="loc_apartment_7_room" id="a7_room">
+          <mxCell parent="apt7" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="109" y="42" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кухня" mapNodeId="loc_apartment_7_kitchen" id="a7_kitchen">
+          <mxCell parent="apt7" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="64" x="144.5" y="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ванная + туалет" mapNodeId="loc_apartment_7_bathroom" id="a7_bath">
+          <mxCell parent="apt7" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="239" y="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Балкон" mapNodeId="loc_apartment_7_balcony" id="a7_balcony">
+          <mxCell parent="apt7" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="112" x="14" y="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e030" edge="1" parent="apt7" source="a7_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="a7_bath">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e031" edge="1" parent="apt7" source="a7_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="a7_kitchen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e034" edge="1" parent="apt7" source="a7_room" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=1;exitDx=0;exitDy=0;" target="a7_balcony">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110.33000000000001" y="100.80999999999995" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e035" edge="1" parent="apt7" source="a7_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="a7_room">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Квартира 6 (Ника)" mapNodeId="loc_apartment_6" id="apt6">
+          <mxCell parent="ent1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="217" width="580" x="461.5" y="645" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Гостиная" mapNodeId="loc_apartment_6_living_room" id="a6_living">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="22.75" y="36" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Прихожая" mapNodeId="loc_apartment_6_hallway" id="a6_hall">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="99" x="22.75" y="117" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Фотостудия" mapNodeId="loc_apartment_6_photo_studio" id="a6_photo">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="103.25" x="182.75" y="36" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Спальня" mapNodeId="loc_apartment_6_bedroom" id="a6_bedroom">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="405.75" y="36" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кухня" mapNodeId="loc_apartment_6_kitchen" id="a6_kitchen">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="64" x="157.75" y="149" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Ванная + туалет" mapNodeId="loc_apartment_6_bathroom" id="a6_bath">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="135" x="268.75" y="117" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Балкон" mapNodeId="loc_apartment_6_balcony" id="a6_balcony">
+          <mxCell parent="apt6" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="112" x="450.75" y="149" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e037" edge="1" parent="apt6" source="a6_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="a6_living">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e038" edge="1" parent="apt6" source="a6_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="a6_kitchen">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e039" edge="1" parent="apt6" source="a6_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" target="a6_photo">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e040" edge="1" parent="apt6" source="a6_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="a6_bedroom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e041" edge="1" parent="apt6" source="a6_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="a6_bath">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e042" edge="1" parent="apt6" source="a6_bedroom" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="a6_balcony">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Подъезд 2" mapNodeId="loc_entrance_2" id="ent2">
+          <mxCell parent="house" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="191" width="1076" x="16" y="1425" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="1 этаж" mapNodeId="loc_entrance_2_floor_1" id="ent2_floor1">
+          <mxCell parent="ent2" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="30" width="1029" x="13" y="51" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e043" edge="1" parent="house" source="yard" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="playground">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e045" edge="1" parent="house" source="yard" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=1;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;libavoidRouting=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ent2_floor1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1152" y="1491" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e046" edge="1" parent="house" source="a5_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="yard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e044" edge="1" parent="house" source="yard" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;libavoidRouting=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="floor1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1123.3" y="1304" />
+            </Array>
+            <mxPoint x="1116.25" y="95" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Мини-маркет" mapNodeId="loc_shop" id="shop_group">
+          <mxCell parent="hc_rd" style="swimlane;html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1">
+            <mxGeometry height="199" width="385" x="1404" y="415" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-5" edge="1" parent="shop_group" source="shop_hall" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="shop_office">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Торговый зал" mapNodeId="loc_shop_hall" id="shop_hall">
+          <mxCell parent="shop_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="157" x="17" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Подсобка / склад" mapNodeId="loc_shop_storage" id="shop_storage">
+          <mxCell parent="shop_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="157" x="208" y="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кабинет управляющего" mapNodeId="loc_shop_manager_office" id="shop_office">
+          <mxCell parent="shop_group" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="157" x="17" y="125" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e052" edge="1" parent="shop_group" source="shop_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="shop_storage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e047" edge="1" parent="hc_rd" source="rd_main" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="yard">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e048" edge="1" parent="hc_rd" source="a5_hall" style="rounded=0;orthogonalLoop=1;html=1;startArrow=none;endArrow=classic;endFill=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="rd_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e049" edge="1" parent="hc_rd" source="rd_main" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" target="cafe_hall">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1313" y="636.59" />
+              <mxPoint x="1579" y="636.59" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e051" edge="1" parent="hc_rd" source="rd_main" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="shop_hall">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1362.53" y="394" />
+              <mxPoint x="1499.47" y="394" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-79" edge="1" parent="hc_rd" source="rd_main" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="school_entry">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-16" edge="1" parent="1" source="bus_route" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;shape=link;" target="xkRBR1pQMnaSZ2y-GxJ7-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="Автобусная остановка" mapNodeId="route_bus_stop_residential" id="bus_route">
+          <mxCell parent="1" style="rhombus;html=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1">
+            <mxGeometry height="154" width="157" x="1199" y="-230" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Район медицинского института" mapNodeId="hc_university" id="hc_uni">
+          <mxCell parent="1" style="swimlane;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="1356" width="635" x="1425" y="-1340" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="РАЙОН МЕДИЦИНСКОГО ИНСТИТУТА" mapNodeId="loc_medical_institute_area" id="uni_main">
+          <mxCell parent="hc_uni" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1">
+            <mxGeometry height="54" width="220" x="215.5" y="48" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Спортивная площадка" mapNodeId="loc_medical_institute_sports_ground" id="uni_sport">
+          <mxCell parent="hc_uni" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="168.5" x="17.5" y="156" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Учебный корпус — этаж 1" mapNodeId="loc_medical_institute_building_floor_1" id="uni_floor1">
+          <mxCell parent="hc_uni" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="168.5" x="241.25" y="156" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Студенческое общежитие" mapNodeId="loc_medical_institute_dormitory" id="uni_dorm">
+          <mxCell parent="hc_uni" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="168.5" x="448" y="156" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Кабинет приемной комиссии" mapNodeId="loc_medical_institute_admissions" id="uni_adm">
+          <mxCell parent="hc_uni" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1">
+            <mxGeometry height="54" width="168.5" x="241.25" y="256" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="e056" edge="1" parent="hc_uni" source="uni_main" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uni_floor1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e057" edge="1" parent="hc_uni" source="uni_main" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="uni_dorm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e058" edge="1" parent="hc_uni" source="uni_main" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" target="uni_sport">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e059" edge="1" parent="hc_uni" source="uni_floor1" style="rounded=0;orthogonalLoop=1;html=1;startArrow=classic;startFill=1;endArrow=classic;endFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uni_adm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e054" edge="1" parent="1" source="rd_main" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;startArrow=none;endArrow=none;shape=link;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="bus_route">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1315.44" y="4.44" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e055" edge="1" parent="1" source="bus_route" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;html=1;startArrow=none;endArrow=none;shape=link;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="uni_main">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1389.67" y="-153" />
+              <mxPoint x="1389.67" y="-1383.33" />
+              <mxPoint x="1750.67" y="-1383.33" />
+            </Array>
+            <mxPoint x="1847.89" y="-336.89" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-12" mapNodeId="hc_central_district" parent="1" style="swimlane;whiteSpace=wrap;html=1;fontFamily=Helvetica;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" value="Центральный район" vertex="1">
+          <mxGeometry height="1342" width="1123" x="14" y="-1340" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-21" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-12" source="xkRBR1pQMnaSZ2y-GxJ7-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-22" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-12" source="xkRBR1pQMnaSZ2y-GxJ7-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-14" mapNodeId="loc_central_park" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;fontStyle=0;" value="Парк" vertex="1">
+          <mxGeometry height="54" width="120" x="806" y="1257" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-20" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-12" source="xkRBR1pQMnaSZ2y-GxJ7-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-23" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-12" source="xkRBR1pQMnaSZ2y-GxJ7-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-29" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-12" source="xkRBR1pQMnaSZ2y-GxJ7-15" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;edgeStyle=orthogonalEdgeStyle;" target="xkRBR1pQMnaSZ2y-GxJ7-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="297" y="1168.4" />
+              <mxPoint x="522.8" y="1168.4" />
+              <mxPoint x="522.8" y="1029" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-63" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-12" source="xkRBR1pQMnaSZ2y-GxJ7-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-52">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="826" y="1168.49" />
+              <mxPoint x="1082.86" y="1168.49" />
+              <mxPoint x="1082.86" y="1044.49" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-15" mapNodeId="loc_central_street" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Центральная улица" vertex="1">
+          <mxGeometry height="30" width="1058" x="32.5" y="1187" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-17" mapNodeId="loc_central_bank" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Банк" vertex="1">
+          <mxGeometry height="54" width="120" x="32.5" y="1257" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-18" mapNodeId="loc_central_forest" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Лес" vertex="1">
+          <mxGeometry height="54" width="120" x="970.5" y="1257" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-19" mapNodeId="loc_central_lake" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Озеро" vertex="1">
+          <mxGeometry height="54" width="120" x="639" y="1257" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-26" mapNodeId="loc_central_health_beauty_center" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#b85450;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=#f8cecc;" value="Центр здоровья и красоты" vertex="1">
+          <mxGeometry height="265" width="476" x="32.5" y="886" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-31" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-33" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-35" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-38" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-28" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-43" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;fontSize=12;fontColor=default;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="xkRBR1pQMnaSZ2y-GxJ7-34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-28" mapNodeId="loc_central_health_beauty_center_reception" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Ресэпшен" vertex="1">
+          <mxGeometry height="30" width="429.5" x="22.869999999999997" y="129" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-30" mapNodeId="loc_central_health_beauty_center_massage_room" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Массажный кабинет" vertex="1">
+          <mxGeometry height="54" width="107" x="22.869999999999997" y="189" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-32" mapNodeId="loc_central_health_beauty_center_solarium" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Кабинет салярия" vertex="1">
+          <mxGeometry height="54" width="115" x="22.869999999999997" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-44" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="xkRBR1pQMnaSZ2y-GxJ7-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-34" mapNodeId="loc_central_health_beauty_center_hair_salon" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Парикмахерская" vertex="1">
+          <mxGeometry height="54" width="115" x="180.12" y="39" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-37" mapNodeId="loc_central_health_beauty_center_sauna" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Сауна" vertex="1">
+          <mxGeometry height="54" width="120" x="333.12" y="43" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-42" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-47" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-26" source="xkRBR1pQMnaSZ2y-GxJ7-39" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-39" mapNodeId="loc_central_health_beauty_center_gym" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Спортивный зал" vertex="1">
+          <mxGeometry height="54" width="115" x="180.12" y="189" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-40" mapNodeId="loc_central_health_beauty_center_changing_room_shower" parent="xkRBR1pQMnaSZ2y-GxJ7-26" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Раздевалка с душевой" vertex="1">
+          <mxGeometry height="54" width="120" x="332.37" y="189" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-25" mapNodeId="loc_central_shopping_center" parent="xkRBR1pQMnaSZ2y-GxJ7-12" style="swimlane;whiteSpace=wrap;html=1;strokeColor=#b85450;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=#f8cecc;" value="Торговый центр" vertex="1">
+          <mxGeometry height="457" width="482.5" x="614.5" y="694" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-71" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-72" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-73" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-74" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-75" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-76" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-48" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-69">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-48" mapNodeId="loc_central_shopping_center_floor_2" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="2 этаж" vertex="1">
+          <mxGeometry height="30" width="437.5" x="19.25" y="117" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-49" mapNodeId="loc_central_shopping_center_floor_2_boutique_repair_03" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="333.5" y="39" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-50" mapNodeId="loc_central_shopping_center_floor_2_boutique_repair_06" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="336.5" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-51" mapNodeId="loc_central_shopping_center_floor_1_sex_shop" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Секс-шоп" vertex="1">
+          <mxGeometry height="54" width="120" x="336.75" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-58" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-60" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-61" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-64" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-48">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="467.84" y="335.51" />
+              <mxPoint x="467.84" y="139.51" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-70" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-52" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-52" mapNodeId="loc_central_shopping_center_floor_1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="1 этаж" vertex="1">
+          <mxGeometry height="30" width="434.25" x="19.25" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-53" mapNodeId="loc_central_shopping_center_floor_1_grocery" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Продукты" vertex="1">
+          <mxGeometry height="60" width="120" x="333.5" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-59" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-54" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-52">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-54" mapNodeId="loc_central_shopping_center_floor_1_appliances" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бытовая техника" vertex="1">
+          <mxGeometry height="54" width="120" x="176.38" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-57" edge="1" parent="xkRBR1pQMnaSZ2y-GxJ7-25" source="xkRBR1pQMnaSZ2y-GxJ7-55" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Helvetica;fontSize=12;fontColor=default;startArrow=classic;startFill=1;" target="xkRBR1pQMnaSZ2y-GxJ7-56">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-55" mapNodeId="loc_central_shopping_center_floor_1_clothing_store" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Одежда" vertex="1">
+          <mxGeometry height="54" width="120" x="176.38" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-56" mapNodeId="loc_central_shopping_center_floor_1_fitting_room" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Примерочная" vertex="1">
+          <mxGeometry height="54" width="120" x="19.5" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-65" mapNodeId="loc_central_shopping_center_floor_1_boutique_repair_01" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="19.5" y="387" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-66" mapNodeId="loc_central_shopping_center_floor_2_boutique_repair_05" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="178" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-67" mapNodeId="loc_central_shopping_center_floor_2_boutique_repair_04" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="19.25" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-68" mapNodeId="loc_central_shopping_center_floor_2_boutique_repair_02" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="178" y="39" as="geometry" />
+        </mxCell>
+        <mxCell id="xkRBR1pQMnaSZ2y-GxJ7-69" mapNodeId="loc_central_shopping_center_floor_2_boutique_repair_01" parent="xkRBR1pQMnaSZ2y-GxJ7-25" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=#6c8ebf;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;fillColor=#dae8fc;" value="Бутик на ремонте" vertex="1">
+          <mxGeometry height="54" width="120" x="19.5" y="39" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

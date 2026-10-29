@@ -1,0 +1,33 @@
+# Текст: в репозитории хранится LF, на Windows выдается CRLF (правило проекта)
+* text=auto eol=crlf
+*.rpy    text eol=crlf
+*.md     text eol=crlf
+*.py     text eol=crlf
+*.ps1    text eol=crlf
+*.cs     text eol=crlf
+*.js     text eol=crlf
+*.yml    text eol=crlf
+*.json   text eol=crlf
+*.txt    text eol=crlf
+*.svg    text eol=crlf
+*.drawio text eol=crlf
+*.sh     text eol=lf
+
+# Бинарные
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ttf  binary
+*.otf  binary
+*.ogg  binary
+*.mp3  binary
+*.wav  binary
+*.opus binary
+*.webm binary
+*.mp4  binary
+*.exe  binary
+*.rpyc binary
+*.rpyb binary
+*.save binary

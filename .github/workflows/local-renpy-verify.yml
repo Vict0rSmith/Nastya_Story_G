@@ -1,0 +1,199 @@
+name: Local Ren'Py verify
+
+on:
+  push:
+    branches:
+      - main
+    # Runtime checks are path-scoped. Local safe sync independently covers all pushes.
+    paths:
+      - 'game/**'
+      - 'tools/run_local_renpy_verify.ps1'
+      - '.github/workflows/local-renpy-verify.yml'
+  workflow_dispatch:
+    inputs:
+      tests:
+        description: 'Suites or testcases, comma-separated (for example dialogue_layout,items_body_wardrobe)'
+        type: string
+        default: 'nastya_runtime'
+      lint_only:
+        description: 'Only lint; runtime will be reported as NOT RUN'
+        type: boolean
+        default: false
+      detailed_report:
+        description: 'Print the full runtime log for diagnosis'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  # Separate pending queue from sync; one nastya-story runner executes jobs serially.
+  group: nastya-story-verify
+  cancel-in-progress: false
+
+jobs:
+  renpy-local-verify:
+    if: ${{ vars.LOCAL_SYNC_ENABLED == 'true' && vars.RENPY_SDK_ROOT != '' }}
+    runs-on:
+      - self-hosted
+      - Windows
+      - nastya-story
+    timeout-minutes: 15
+
+    steps:
+      - name: Validate configuration
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+          RENPY_SDK_ROOT: ${{ vars.RENPY_SDK_ROOT }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:NASTYA_LOCAL_REPO)) {
+            throw "Repository variable NASTYA_LOCAL_REPO is not configured."
+          }
+          if ([string]::IsNullOrWhiteSpace($env:RENPY_SDK_ROOT)) {
+            throw "Repository variable RENPY_SDK_ROOT is not configured."
+          }
+
+      - name: Check local repository availability
+        id: local_repo
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+          GITHUB_EVENT_NAME_VALUE: ${{ github.event_name }}
+        run: |
+          if (Test-Path -LiteralPath $env:NASTYA_LOCAL_REPO) {
+            "available=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+            exit 0
+          }
+
+          if ($env:GITHUB_EVENT_NAME_VALUE -eq "push") {
+            Write-Host "::notice::Local repository is unavailable; Ren'Py verification skipped. Connect the external drive and start the Nastya Story runner."
+            "available=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+            exit 0
+          }
+
+          throw "Local repository path does not exist or is not accessible to the runner account: $env:NASTYA_LOCAL_REPO"
+
+      - name: Checkout verification scripts
+        if: ${{ steps.local_repo.outputs.available == 'true' }}
+        uses: actions/checkout@v7
+
+      - name: Prepare local verification target
+        if: ${{ steps.local_repo.outputs.available == 'true' }}
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+          GITHUB_EVENT_NAME_VALUE: ${{ github.event_name }}
+          GITHUB_SHA_VALUE: ${{ github.sha }}
+        run: |
+          if ($env:GITHUB_EVENT_NAME_VALUE -eq "push") {
+            ./tools/safe_sync_local.ps1 -RepoRoot $env:NASTYA_LOCAL_REPO
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+            $actualSha = (git -C $env:NASTYA_LOCAL_REPO rev-parse HEAD).Trim()
+            if ($actualSha -ne $env:GITHUB_SHA_VALUE) {
+              throw "Verification target changed: expected $env:GITHUB_SHA_VALUE, got $actualSha. Use the run for the current commit."
+            }
+            exit 0
+          }
+
+          $dirty = git -C $env:NASTYA_LOCAL_REPO status --porcelain
+          if ($LASTEXITCODE -ne 0) {
+            throw "Unable to read local repository status."
+          }
+          if ($dirty) {
+            $dirty | ForEach-Object { Write-Host "  $_" -ForegroundColor Yellow }
+            throw "Manual verification requires a clean local working tree."
+          }
+
+          git -C $env:NASTYA_LOCAL_REPO fetch origin $env:GITHUB_SHA_VALUE
+          if ($LASTEXITCODE -ne 0) {
+            throw "Unable to fetch verification commit $env:GITHUB_SHA_VALUE."
+          }
+
+          git -C $env:NASTYA_LOCAL_REPO checkout --detach $env:GITHUB_SHA_VALUE
+          if ($LASTEXITCODE -ne 0) {
+            throw "Unable to checkout verification commit $env:GITHUB_SHA_VALUE."
+          }
+
+          $actualSha = (git -C $env:NASTYA_LOCAL_REPO rev-parse HEAD).Trim()
+          if ($actualSha -ne $env:GITHUB_SHA_VALUE) {
+            throw "Local verification target mismatch. Expected $env:GITHUB_SHA_VALUE, got $actualSha."
+          }
+          Write-Host "Manual verification target prepared: $actualSha"
+
+      - name: Run Ren'Py lint and runtime tests
+        id: verify
+        if: ${{ steps.local_repo.outputs.available == 'true' }}
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+          RENPY_SDK_ROOT: ${{ vars.RENPY_SDK_ROOT }}
+          VERIFY_TESTS: ${{ inputs.tests }}
+          VERIFY_LINT_ONLY: ${{ inputs.lint_only }}
+          VERIFY_DETAILED: ${{ inputs.detailed_report }}
+        run: |
+          $lintOutput = Join-Path $env:RUNNER_TEMP "nastya-story-renpy-lint.txt"
+          $testOutput = Join-Path $env:RUNNER_TEMP "nastya-story-renpy-tests.txt"
+          $screenshotOutput = Join-Path $env:RUNNER_TEMP "nastya-story-renpy-screenshots-$env:GITHUB_RUN_ID-$env:GITHUB_RUN_ATTEMPT"
+          $selection = @('nastya_runtime')
+          if (-not [string]::IsNullOrWhiteSpace($env:VERIFY_TESTS)) {
+            $selection = @($env:VERIFY_TESTS -split ',' | ForEach-Object { $_.Trim() })
+          }
+          ./tools/run_local_renpy_verify.ps1 `
+            -RepoRoot $env:NASTYA_LOCAL_REPO `
+            -RenpySdkRoot $env:RENPY_SDK_ROOT `
+            -LintOutput $lintOutput `
+            -TestOutput $testOutput `
+            -ScreenshotOutput $screenshotOutput `
+            -Tests $selection `
+            -LintOnly:($env:VERIFY_LINT_ONLY -eq 'true') `
+            -DetailedReport:($env:VERIFY_DETAILED -eq 'true')
+
+      - name: Publish compact verification summary
+        if: ${{ always() }}
+        shell: powershell
+        env:
+          VERIFY_OUTCOME: ${{ steps.verify.outcome }}
+          VERIFY_AVAILABLE: ${{ steps.local_repo.outputs.available }}
+          VERIFY_SHA: ${{ github.sha }}
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+        run: |
+          $lines = @("Ren'Py verification: $env:VERIFY_OUTCOME", "Requested SHA: $env:VERIFY_SHA")
+          if ($env:VERIFY_AVAILABLE -eq 'true') {
+            $actualSha = git -C $env:NASTYA_LOCAL_REPO rev-parse HEAD
+            $lines += "Local SHA: $actualSha"
+          }
+          if ($env:VERIFY_OUTCOME -ne 'success') {
+            $lines += 'Verification is incomplete or failed; do not claim lint/runtime passed.'
+          }
+          $report = Join-Path $env:RUNNER_TEMP 'nastya-story-renpy-tests.txt'
+          if ($env:VERIFY_OUTCOME -in @('success', 'failure') -and (Test-Path -LiteralPath $report)) {
+            $lines += Get-Content -LiteralPath $report | Where-Object { $_ -match '^Test selection:|^Runtime:|^\[rpytest\]\s+(Status\s*:|Test cases\s*:|Assertions\s*:|Time\s*:)' }
+          }
+          $lines += 'Full logs and selected test screenshots: verification artifact. Images have not been visually reviewed by this job.'
+          (@('```text') + $lines + @('```')) | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+
+      - name: Restore local main after manual verification
+        if: ${{ always() && steps.local_repo.outputs.available == 'true' && github.event_name == 'workflow_dispatch' }}
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+        run: |
+          git -C $env:NASTYA_LOCAL_REPO checkout main
+          if ($LASTEXITCODE -ne 0) {
+            throw "Unable to restore local main after manual verification."
+          }
+          ./tools/safe_sync_local.ps1 -RepoRoot $env:NASTYA_LOCAL_REPO
+
+      - name: Upload Ren'Py verification reports and screenshots
+        if: ${{ always() && steps.local_repo.outputs.available == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: renpy-verify-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}\nastya-story-renpy-lint.txt
+            ${{ runner.temp }}\nastya-story-renpy-tests.txt
+            ${{ runner.temp }}\nastya-story-renpy-screenshots-${{ github.run_id }}-${{ github.run_attempt }}\**\*.png
+          if-no-files-found: warn
+          retention-days: 14

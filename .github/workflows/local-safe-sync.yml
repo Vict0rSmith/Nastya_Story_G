@@ -1,0 +1,64 @@
+name: Local safe sync
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  # Keep sync and runtime pending jobs from cancelling each other.
+  # The single nastya-story runner serializes access to the local checkout.
+  group: nastya-story-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-local-working-copy:
+    if: ${{ vars.LOCAL_SYNC_ENABLED == 'true' }}
+    runs-on:
+      - self-hosted
+      - Windows
+      - nastya-story
+    timeout-minutes: 5
+
+    steps:
+      - name: Validate configuration
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+        run: |
+          if ([string]::IsNullOrWhiteSpace($env:NASTYA_LOCAL_REPO)) {
+            throw "Repository variable NASTYA_LOCAL_REPO is not configured."
+          }
+
+      - name: Check local repository availability
+        id: local_repo
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+          GITHUB_EVENT_NAME_VALUE: ${{ github.event_name }}
+        run: |
+          if (Test-Path -LiteralPath $env:NASTYA_LOCAL_REPO) {
+            "available=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+            exit 0
+          }
+
+          if ($env:GITHUB_EVENT_NAME_VALUE -eq "push") {
+            throw "SYNC PENDING: local repository is unavailable. Connect the external drive and request a fresh sync before starting the next task."
+          }
+
+          throw "Local repository path does not exist or is not accessible to the runner account: $env:NASTYA_LOCAL_REPO"
+
+      - name: Checkout automation scripts
+        if: ${{ steps.local_repo.outputs.available == 'true' }}
+        uses: actions/checkout@v7
+
+      - name: Safely fast-forward local main
+        if: ${{ steps.local_repo.outputs.available == 'true' }}
+        shell: powershell
+        env:
+          NASTYA_LOCAL_REPO: ${{ vars.NASTYA_LOCAL_REPO }}
+        run: ./tools/safe_sync_local.ps1 -RepoRoot $env:NASTYA_LOCAL_REPO
