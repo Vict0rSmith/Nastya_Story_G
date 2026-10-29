@@ -13,7 +13,7 @@ related_specs:
   - docs/content/intimate_language/README.md
   - docs/content/WRITING_PIPELINE.md
 related_entities: []
-implementation_commits: [8c993a9, e37e942]
+implementation_commits: [8c993a9, e37e942, 3257ab4]
 implementation_report: null
 ---
 
@@ -76,7 +76,7 @@ implementation_report: null
 
 ### Проверки и результат
 
-- `tools/project_health_check.py` — HEALTH_PLACEHOLDER
+- `tools/project_health_check.py` — OK: 0 errors, 0 warnings.
 - Нет буквы «йо», BOM, смешанных переводов строк в измененных файлах.
 - `.rpy` не менялись.
 
