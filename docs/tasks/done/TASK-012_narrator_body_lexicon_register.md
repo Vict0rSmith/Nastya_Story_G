@@ -1,6 +1,6 @@
 ---
 id: TASK-012
-status: review
+status: done
 title: Регистр телесной лексики в авторской речи
 created: 2026-10-28
 approved_by_owner: true
@@ -14,7 +14,7 @@ related_specs:
   - docs/content/ADULT_EROTIC_TONE_GUIDE.md
   - docs/content/WRITING_BRIEF.md
 related_entities: []
-implementation_commits: []
+implementation_commits: [54f6b3b]
 implementation_report: null
 ---
 

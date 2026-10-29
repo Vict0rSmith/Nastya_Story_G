@@ -18,7 +18,8 @@
 | 🟣 **REVIEW** | [`TASK-009`](tasks/review/TASK-009_phone_ui_contacts_quests_calendar_messages.md) — телефон: smartphone UI, контакты, задания, календарь и сообщения | Замечания к приложениям устранены; FULL_LOCAL пройден. Повторная приемка владельцем; cooldown и тексты бытовых ответов остаются неутвержденными |
 | ✅ **DONE** | [`TASK-010`](tasks/done/TASK-010_arousal_intimate_actions_remote_toy_sleep_hud.md) — шкала возбуждения, интимные действия, remote toy, сон, compatibility и HUD | Принято владельцем 2026-09-14; опубликовано в `main` |
 | ✅ **DONE** | [`TASK-011`](tasks/done/TASK-011_ui_review_pass_1.md) — первый UI review-pass: HUD, одношаговые действия, phone quest/calendar и системные меню | Принято владельцем 2026-09-15; финальный tooltip-fix проверен, опубликован и синхронизирован |
-| 🟣 **REVIEW** | [`TASK-012`](tasks/review/TASK-012_narrator_body_lexicon_register.md) — регистр телесной лексики в авторской речи (только правила) | Приемка владельцем |
+| [`TASK-012`](tasks/done/TASK-012_narrator_body_lexicon_register.md) | Регистр телесной лексики в авторской речи; принято владельцем 2026-10-30 |
+| ✅ **DONE** | [`TASK-012`](tasks/done/TASK-012_narrator_body_lexicon_register.md) — регистр телесной лексики в авторской речи (только правила) | Принято владельцем 2026-10-30 |
 
 `TASK-002`, `TASK-004` и `TASK-006` завершены и приняты владельцем. Для TASK-002 финальная синхронизация runtime transitions с каноническим `map.drawio` выполнена 2026-09-06 на уровне `REMOTE_LIMITED`; первоначальная миграция ранее проходила локальные Ren'Py-проверки.
 
