@@ -1,6 +1,6 @@
 ---
 id: TASK-013
-status: review
+status: done
 title: Справочник реальной интимной физиологии (только документация)
 created: 2026-10-30
 approved_by_owner: true
@@ -13,7 +13,7 @@ related_specs:
   - docs/content/intimate_language/README.md
   - docs/content/WRITING_PIPELINE.md
 related_entities: []
-implementation_commits: [8c993a9, e37e942, 3257ab4]
+implementation_commits: [8c993a9, e37e942, 3257ab4, 8abb5ef]
 implementation_report: null
 ---
 
@@ -72,7 +72,7 @@ implementation_report: null
 - `docs/content/intimate_language/README.md`
 - `docs/content/WRITING_PIPELINE.md`
 - `docs/DEVELOPMENT_BOARD.md`
-- `docs/tasks/review/TASK-013_intimate_physiology_plausibility.md`
+- `docs/tasks/done/TASK-013_intimate_physiology_plausibility.md`
 
 ### Проверки и результат
 
@@ -90,3 +90,7 @@ implementation_report: null
 - Данные о сквирте скудные, частота у разных авторов сильно разнится.
 - Данные об оргазме при анальной стимуляции — опросные и смешаны с другими ласками.
 - Имя файла TASK осталось прежним (`..._plausibility`), чтобы не ломать ссылки.
+
+### Приемка
+
+Принято владельцем 2026-10-30.

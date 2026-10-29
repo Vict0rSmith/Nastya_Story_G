@@ -19,7 +19,7 @@
 | ✅ **DONE** | [`TASK-010`](tasks/done/TASK-010_arousal_intimate_actions_remote_toy_sleep_hud.md) — шкала возбуждения, интимные действия, remote toy, сон, compatibility и HUD | Принято владельцем 2026-09-14; опубликовано в `main` |
 | ✅ **DONE** | [`TASK-011`](tasks/done/TASK-011_ui_review_pass_1.md) — первый UI review-pass: HUD, одношаговые действия, phone quest/calendar и системные меню | Принято владельцем 2026-09-15; финальный tooltip-fix проверен, опубликован и синхронизирован |
 | ✅ **DONE** | [`TASK-012`](tasks/done/TASK-012_narrator_body_lexicon_register.md) — регистр телесной лексики в авторской речи (только правила) | Принято владельцем 2026-10-30 |
-| 🟣 **REVIEW** | [`TASK-013`](tasks/review/TASK-013_intimate_physiology_plausibility.md) — справочник реальной интимной физиологии (только документация) | Ожидает приемки владельцем |
+| ✅ **DONE** | [`TASK-013`](tasks/done/TASK-013_intimate_physiology_plausibility.md) — справочник реальной интимной физиологии (только документация) | Принято владельцем 2026-10-30 |
 
 `TASK-002`, `TASK-004` и `TASK-006` завершены и приняты владельцем. Для TASK-002 финальная синхронизация runtime transitions с каноническим `map.drawio` выполнена 2026-09-06 на уровне `REMOTE_LIMITED`; первоначальная миграция ранее проходила локальные Ren'Py-проверки.
 
@@ -69,6 +69,7 @@ flowchart LR
 | [`TASK-008`](tasks/done/TASK-008_items_wardrobe_intimate_status_hud.md) | Унифицированные items/wardrobe и status HUD; принято владельцем 2026-09-08 |
 | [`TASK-011`](tasks/done/TASK-011_ui_review_pass_1.md) | UI review-pass 1 принят владельцем 2026-09-15; финальное позиционирование tooltip проверено в локальном runtime |
 | [`TASK-012`](tasks/done/TASK-012_narrator_body_lexicon_register.md) | Регистр телесной лексики в авторской речи; принято владельцем 2026-10-30 |
+| [`TASK-013`](tasks/done/TASK-013_intimate_physiology_plausibility.md) | Справочник реальной интимной физиологии; принято владельцем 2026-10-30 |
 
 ## ⚠ Блокеры и точки внимания
 
