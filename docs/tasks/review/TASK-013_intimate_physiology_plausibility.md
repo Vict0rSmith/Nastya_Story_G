@@ -14,7 +14,7 @@ related_specs:
   - docs/content/intimate_language/README.md
   - docs/content/WRITING_PIPELINE.md
 related_entities: []
-implementation_commits: []
+implementation_commits: [8c993a9]
 implementation_report: null
 ---
 
@@ -50,7 +50,7 @@ implementation_report: null
 - §14 существует, помечен как единственный владелец, содержит шкалы, запреты, правило гиперболы и источники.
 - Строка про «потекла» в §3 ссылается на §14 и ограничивает гиперболу речью и мыслями.
 - В чек-листе есть признак с плохим и хорошим примером.
-- `tools/project_health_check.py` — 0 ошибок.
+- `tools/project_health_check.py` — OK: 0 errors, 0 warnings.
 
 ## Implementation report
 
