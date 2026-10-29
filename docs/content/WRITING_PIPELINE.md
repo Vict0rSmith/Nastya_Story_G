@@ -68,7 +68,7 @@
 1. Писать связной прозой в формате брифа §6.
 2. Сверить смысл и логику: факты, буквальное значение слов, причинность, естественность русской фразы ([`DIALOGUE_WRITING_GUIDE.md`](DIALOGUE_WRITING_GUIDE.md) §6).
 3. Сверить голоса с карточками.
-4. Если нужна телесная лексика — выбрать слово под уже установленный факт по [`intimate_language/README.md`](intimate_language/README.md); регистр авторской речи — [`intimate_language/CHARACTER_LANGUAGE_PROFILE.md`](intimate_language/CHARACTER_LANGUAGE_PROFILE.md) §5. Синоним не должен незаметно менять часть тела, действие, интенсивность или согласие.
+4. Если нужна телесная лексика — выбрать слово под уже установленный факт по [`intimate_language/README.md`](intimate_language/README.md); регистр авторской речи — [`intimate_language/CHARACTER_LANGUAGE_PROFILE.md`](intimate_language/CHARACTER_LANGUAGE_PROFILE.md) §5; масштаб телесных реакций — [`intimate_language/STATES_SENSATIONS_REACTIONS.md`](intimate_language/STATES_SENSATIONS_REACTIONS.md) §14. Синоним не должен незаметно менять часть тела, действие, интенсивность или согласие.
 5. Убрать найденные признаки «машинного» текста ([`STYLE_CHECKLIST.md`](STYLE_CHECKLIST.md)). Если их нет, ничего не трогать.
 
 Правка меняет слова и ритм, но сохраняет «нельзя потерять» и нужную конкретность. Нельзя самовольно смягчать прямое до эвфемизма и нельзя усиливать сверх установленного.
